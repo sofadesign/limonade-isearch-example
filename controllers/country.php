@@ -23,26 +23,25 @@
 		return render('country_list.tpl.php');
 	}
 
-	// searching for a country after a POST event
-	// we might want to remove ALL the VIEW logic from here,
-	// and move it to the VIEW (ie: <ul><li> ... etc)
-	// just to follow true MVC patterns
+  # GET /country/search
 	function country_search()
 	{
-		if( sizeof( $_POST ) )
-		{
-			$output = '<ul id="countries" selected="true">';
-			foreach( _get_countries() as $country )
-			{
-				if( preg_match( '/^' . $_POST[ 'country' ] . '/i', $country ) )
-				{
-					$output .= '<li>' . $country . '</li>';
-				}
-			}
-			$output .= '</ul>';
-			set( 'output', $output );
-		}
 		return html( 'country_search.tpl.php' );
+	}
+	
+	# POST /country/search
+	function country_search_results()
+	{
+		$countries = array();
+		foreach( _get_countries() as $country )
+		{
+			if( preg_match( '/^' . $_POST[ 'country' ] . '/i', $country ) )
+			{
+				$countries[] = $country;
+			}
+		}
+		set('countries', $countries);
+		return html( 'country_search_results.tpl.php' );
 	}
 
 	// and some countries, sorted by name ;)

@@ -23,7 +23,9 @@
 	// we call the same function country_search() in both cases
 	// POST and GET and that function will handle the rest
 	dispatch( '/country/search', 'country_search' );
-	dispatch_post( '/country/search', 'country_search' );
+	dispatch_post( '/country/search', 'country_search_results' );
+	// we use a POST method for example, but normally in REST, POST is
+	// for creating new resource. So we should use a GET method here
 
 	// let's run()
 	run();

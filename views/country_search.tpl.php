@@ -13,5 +13,3 @@
         </fieldset>
 	</form>
 </div>
-
-<?= $output; // we set this variable from the controller country.php ?>
