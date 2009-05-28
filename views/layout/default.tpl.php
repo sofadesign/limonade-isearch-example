@@ -10,3 +10,7 @@
 <style type="text/css" media="screen">@import "public/css/iui.css";</style>
 <script type="application/x-javascript" src="public/js/iui.js"></script>
 </head>
+<body onclick="console.log('Hello', event.target);">
+  <?= $content; ?>
+</body>
+</html>

@@ -1,5 +1,3 @@
-<?php include_once 'header.tpl.php'; ?>
-<body onclick="console.log('Hello', event.target);">
 	<div class="toolbar">
 		<h1 id="pageTitle"></h1>
 		<a id="backButton" class="button" href="#"></a>
@@ -21,4 +19,3 @@
 		<hr>
 		<h2>download the source from <a href="http://mehesz.net/downloads/projects/isearch.zip">http://mehesz.net/downloads/projects/isearch.zip</a></h2>
 	</div>
-</body>
