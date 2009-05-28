@@ -7,21 +7,20 @@
 	// if we used a database but for simplicity's sake we didn't
 	function country_list()
 	{
-		$output = '<ul id="list" title="list" selected="true">';
-		$old_first_letter = '';
+		$countries = array();
+		$group = '';
 		foreach( _get_countries() as $country )
 		{
-			$first_letter = substr( $country, 0, 1 );
-			if( $first_letter != $old_first_letter )
+			$first_letter = $country[0];
+			if( $first_letter != $group )
 			{
-				$output .= '<li class="group">' . $first_letter . '</li>';
+				$countries[] = array($first_letter);
+				$group = $first_letter;
 			}
-			$output .= '<li>' . $country . '</li>';
-			$old_first_letter = $first_letter;
+			$countries[] = $country;
 		}
-		$output .= '</ul>';
-
-		return $output;
+    set('countries', $countries);
+		return render('country_list.tpl.php');
 	}
 
 	// searching for a country after a POST event
