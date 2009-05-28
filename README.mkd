@@ -1,0 +1,13 @@
+iSearch DEMO v.0.1 - 05/23/2009
+===============================
+
+by imehesz *AT* gmail *DOT* com (<http://mehesz.net>)
+
+I found limonade couple of days ago (and iUI pretty much the same time)
+wanted to create something very VERY simple, which helps me and
+hopefully other people, to understand how the basic functionalities work
+in this micro-framework
+
+* limonade - a PHP micro-framework ( <http://www.sofa-design.net/limonade> )
+* iUI - iPhone User Interface Framework ( <http://code.google.com/p/iui/> )
+

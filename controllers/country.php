@@ -5,6 +5,7 @@
 
 	// listing the countries, obviously would be much nicer
 	// if we used a database but for simplicity's sake we didn't
+	# GET /country/list
 	function country_list()
 	{
 		$countries = array();
